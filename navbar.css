@@ -1,0 +1,131 @@
+nav{
+width:100%;
+height:85px;
+background:#05a13e;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 30px;
+border-bottom:3px solid #000;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #000;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+}
+
+.nav-links a{
+color:#22c55e;
+background:#000;
+text-decoration:none;
+font-weight:600;
+padding:10px 16px;
+border-radius:6px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+transform:scale(1.08);
+background:#111;
+color:#fff;
+}
+
+.enroll-btn{
+color:#22c55e!important;
+}
+
+.back-btn{
+display:inline-block;
+margin:20px;
+padding:10px 20px;
+background:#22c55e;
+color:#000;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+/*form*/
+
+/* ================= MOBILE NAVBAR ================= */
+
+@media(max-width:768px){
+
+nav{
+width:100%;
+height:85px;
+padding:0 15px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.logo{
+position:absolute;
+left:15px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+}
+
+.nav-links{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:6px;
+}
+
+.nav-links a{
+font-size:10px;
+padding:7px 9px;
+white-space:nowrap;
+}
+
+}
+
+@media(max-width:400px){
+
+.logo{
+left:10px;
+}
+
+.logo img{
+width:45px;
+height:45px;
+}
+
+.nav-links{
+left:52%;
+transform:translateX(-50%);
+gap:4px;
+}
+
+.nav-links a{
+font-size:9px;
+padding:6px 7px;
+}
+
+}

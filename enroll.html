@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form</title>
+
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="navbar.css">
+    
+    
+</head>
+<body>
+    
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html#home">
+            <img src="image/logo.jpg">
+        </a>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="index.html#home">
+            Home
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+        <a href="index.html#gyms">
+            Gyms
+        </a>
+
+        <a href="index.html#news">
+            News
+        </a>
+
+        <a href="index.html#contact">
+            Contact
+        </a>
+
+
+    </div>
+
+</nav>
+
+    <section class="enroll-container" id="enroll">
+
+        <h2 class="section-title">Enrollment Form</h2>
+
+        <form class="form-container" id="enrollmentForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="input-group">
+                <label>Belt Level</label>
+
+                <select id="belt" name="belt" required>
+                <option value="" selected disabled>Select Belt Level</option>    
+
+                    <option>White</option>
+                    <option>Low Yellow</option>
+                    <option>High Yellow</option>
+                    <option>Low Blue</option>
+                    <option>High Blue</option>
+                    <option>Low Red</option>
+                    <option>High Red</option>
+                    <option>Low Brown</option>
+                    <option>High Brown</option>
+                    <option>Black</option>
+
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Address</label>
+                <input type="text" id="address" name="address" >
+            </div>            
+
+            <div class="input-group">
+                <label>Facebook Name</label>
+                <input type="text" id="facebook" name="facebook" placeholder="Put Facebook link if Possible">
+            </div>
+
+            <div class="input-group">
+                <label>Medical Conditions</label> 
+                <textarea id="medical" type="text" name="medical" placeholder="Please specify if none put None"></textarea>
+            </div>
+
+            <button type="submit">
+                Submit Enrollment
+            </button>
+
+        </form>
+
+    </section>
+
+    <script src="enroll.js"></script>
+
+</body>
+</html>

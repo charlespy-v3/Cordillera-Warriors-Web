@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cordillera Warriors TKD</title>
+
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        <a href="#home">
+            <img src="image/logo.jpg">
+        </a>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#gyms">Gyms</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <a href="enroll.html" class="enroll-btn">
+            Enroll
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Train With
+            <span>
+                Cordillera Warriors
+            </span>
+        </h1>
+
+        <p>
+            Discipline. Respect. Excellence.
+            Join our Taekwondo family and improve your confidence,
+            fitness, and martial arts skills.
+        </p>
+
+        <a href="enroll.html">
+            <button>
+                ENROLL NOW
+            </button>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About
+    </h2>
+
+    <p>
+        Cordillera Warriors Taekwondo is a family-oriented team dedicated
+        to developing discipline, confidence, self-defense, fitness,
+        and sportsmanship through Taekwondo training.
+
+        For almost 5 years, our team has welcomed students from different
+        schools and backgrounds who share the passion to learn and grow
+        together.
+
+        We believe Taekwondo is not only about competition, but also about
+        building character, respect, perseverance, and strong friendships.
+
+        Everyone is welcome, from beginners to experienced athletes.
+        We provide affordable quality training while maintaining a
+        friendly and supportive family-like environment.
+    </p>
+
+</section>
+
+
+<!-- GYMS -->
+
+<section id="gyms">
+
+    <h2 class="section-title">
+        Affiliated Gyms
+    </h2>
+
+    <div class="slider">
+
+        <button class="arrow left" onclick="moveSlider('gym',-1)">
+            ❮
+        </button>
+
+        <div class="slider-window">
+
+            <div class="card-track">
+
+                <div class="card">
+
+                    <img src="image/smith.jpg">
+
+                    <button onclick="showSchedule('Smith')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.app.goo.gl/gP1JTu2mUDupJf8AA" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="image/poliwes.jpg">
+
+                    <button onclick="showSchedule('Poliwes')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.app.goo.gl/iMtEy3F5FrU3PWV98" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="image/tadiangan.jpg">
+
+                    <button onclick="showSchedule('Tadiangan')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.google.com/?q=Tadiangan,Baguio" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="image/sancarlos.jpg">
+
+                    <button onclick="showSchedule('San Carlos')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.app.goo.gl/oxTMZb4HUHv5Tf6h8" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="image/bakakeng.jpg">
+
+                    <button onclick="showSchedule('Bakakeng')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.app.goo.gl/sMRL5xy8E43QjNZj6" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="image/victoria.jpg">
+
+                    <button onclick="showSchedule('Victoria')">
+                        View Schedule
+                    </button>
+
+                    <a href="https://maps.app.goo.gl/C7LZRrz2uYMXDwWt9" target="_blank">
+                        <button>
+                            Location
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="arrow right" onclick="moveSlider('gym',1)">
+            ❯
+        </button>
+
+    </div>
+
+    <div id="schedule-box"></div>
+
+</section>
+
+<!-- NEWS -->
+
+<section id="news">
+
+    <h2 class="section-title">
+        News
+    </h2>
+
+    <div class="slider">
+
+        <button class="arrow left" onclick="moveSlider('event',-1)">
+            ❮
+        </button>
+
+        <div class="slider-window">
+<div class="event-track">
+
+    <div class="card news-card" data-news="yuri">
+
+        <img src="image/yuri.jpg">
+
+        <h3>
+            Big Boy or Baby Boy
+        </h3>
+
+        <button onclick="openNewsCard(this)">
+            Learn More
+        </button>
+
+    </div>
+
+
+    <div class="card news-card" data-news="carlo">
+
+        <img src="image/carlo.jpg">
+
+        <h3>
+            The New Daniel Padilla Appears on Cordillera Warriors!!
+        </h3>
+
+        <button onclick="openNewsCard(this)">
+            Learn More
+        </button>
+
+    </div>
+
+
+    <div class="card news-card" data-news="ji">
+
+        <img src="image/ji.jpg">
+
+        <h3>
+            Paldo and Paldog
+        </h3>
+
+        <button onclick="openNewsCard(this)">
+            Learn More
+        </button>
+
+    </div>
+
+
+    <div class="card news-card" data-news="silos">
+
+        <img src="image/silos.jpg">
+
+        <h3>
+            Selos or Jalosy?
+        </h3>
+
+        <button onclick="openNewsCard(this)">
+            Learn More
+        </button>
+
+    </div>
+
+
+    <div class="card news-card" data-news="tulog">
+
+        <img src="image/tulog.jpg">
+
+        <h3>
+            Tulog tulogan para ma pwetan?
+        </h3>
+
+        <button onclick="openNewsCard(this)">
+            Learn More
+        </button>
+
+    </div>
+
+</div>
+        </div>
+
+
+        <button class="arrow right" onclick="moveSlider('event',1)">
+            ❯
+        </button>
+
+    </div>
+
+</section>
+
+<!-- SCHEDULE POPUP -->
+
+<div class="schedule-popup" id="schedulePopup">
+
+    <div class="schedule-box">
+
+        <button class="close-btn" onclick="closeSchedule()">
+            X
+        </button>
+
+        <img id="scheduleImage" src="">
+
+    </div>
+
+</div>
+
+<!-- NEWS POPUP -->
+
+<div class="news-popup" id="newsPopup">
+
+    <div class="news-box">
+
+        <button class="close-btn" onclick="closeNews()">
+            X
+        </button>
+
+        <img id="popupImage" src="">
+
+        <h2 id="popupTitle">
+            News Title
+        </h2>
+
+        <p id="popupText">
+            News Content
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact
+    </h2>
+
+    <p>
+        📍 Adonis, Bembang Club
+    </p>
+
+    <p>
+        📞 +69 6767676769
+    </p>
+
+    <p>
+        ✉️ giganiga123@gmail.com
+    </p>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Cordillera Warriors Taekwondo
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
