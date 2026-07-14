@@ -15,7 +15,7 @@ let currentDate="";
 
 data.forEach(row=>{
 
-const date=new Date(row[6]);
+const date=new Date(row[7]);
 
 const formatted=date.toLocaleDateString("en-US",{
 year:"numeric",
@@ -29,7 +29,7 @@ currentDate=formatted;
 
 table.innerHTML+=`
 <tr class="dateRow">
-<td colspan="7"><strong>${formatted}</strong></td>
+<td colspan="8"><strong>${formatted}</strong></td>
 </tr>
 `;
 
@@ -38,25 +38,18 @@ table.innerHTML+=`
 table.innerHTML+=`
 
 <tr>
-
 <td>${row[0]}</td>
-
 <td>${row[1]}</td>
-
 <td>${row[2]}</td>
-
 <td>${row[3]}</td>
-
 <td>${row[4]}</td>
-
 <td>${row[5]}</td>
-
 <td>${row[6]}</td>
 
-<td>${row[7]}</td>
-
-
-<td>${date.toLocaleTimeString()}</td>
+<td>${date.toLocaleTimeString("en-US",{
+hour:"numeric",
+minute:"2-digit"
+})}</td>
 
 </tr>
 
