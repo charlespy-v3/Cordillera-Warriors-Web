@@ -150,12 +150,12 @@ document.getElementById("popupTitle").textContent=title;
 
 document.getElementById("popupMessage").textContent=message;
 
-document.getElementById("popup").style.display="flex";
+document.getElementById("popup").classList.add("show");
 
 }
 
 function closePopup(){
 
-document.getElementById("popup").style.display="none";
+document.getElementById("popup").classList.remove("show");
 
 }
