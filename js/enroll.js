@@ -12,8 +12,11 @@ submitBtn.classList.add("loading");
 
 const name=document.getElementById("name").value.trim();
 const age=parseInt(document.getElementById("age").value);
+const gender=document.getElementById("gender").value;
+const gym=document.getElementById("gym").value;
 const belt=document.getElementById("belt").value;
 const facebook=document.getElementById("facebook").value.trim();
+const medical=document.getElementById("medical").value.trim();
 
 if(!/^[a-zA-Z\s]+$/.test(name)){
 
@@ -34,6 +37,34 @@ if(age<4||age>80){
 showPopup(
 "Invalid Age",
 "Age must be between 4 and 80."
+);
+
+submitBtn.disabled=false;
+submitBtn.textContent="Submit Enrollment";
+submitBtn.classList.remove("loading");
+return;
+
+}
+
+if(gender===""){
+
+showPopup(
+"Gender Required",
+"Please select your gender."
+);
+
+submitBtn.disabled=false;
+submitBtn.textContent="Submit Enrollment";
+submitBtn.classList.remove("loading");
+return;
+
+}
+
+if(gym===""){
+
+showPopup(
+"Gym Required",
+"Please choose your preferred training gym."
 );
 
 submitBtn.disabled=false;
@@ -75,8 +106,9 @@ const data={
 
 name:document.getElementById("name").value,
 age:document.getElementById("age").value,
+gender:document.getElementById("gender").value,
+gym:document.getElementById("gym").value,
 belt:document.getElementById("belt").value,
-address:document.getElementById("address").value,
 facebook:document.getElementById("facebook").value,
 medical:document.getElementById("medical").value
 
@@ -88,8 +120,9 @@ const formData = new FormData();
 
 formData.append("name", data.name);
 formData.append("age", data.age);
+formData.append("gender", data.gender);
+formData.append("gym", data.gym);
 formData.append("belt", data.belt);
-formData.append("address", data.address);
 formData.append("facebook", data.facebook);
 formData.append("medical", data.medical);
 
