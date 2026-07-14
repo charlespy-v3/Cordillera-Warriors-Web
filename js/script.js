@@ -1,5 +1,5 @@
+console.log("script.js started");
 // ================= SLIDER =================
-
 function setupSlider(trackClass){
 
     const track=document.querySelector(trackClass);
@@ -17,6 +17,8 @@ function setupSlider(trackClass){
 
 setupSlider(".card-track");
 setupSlider(".event-track");
+console.log("Slider loaded");
+
 
 
 
@@ -171,7 +173,7 @@ document.querySelectorAll(".slider-window").forEach(slider=>{
 
 
 });
-
+console.log("Swipe loaded");
 
 
 
@@ -266,7 +268,7 @@ function closeNews(){
 
 }
 
-
+console.log("News loaded");
 
 
 
@@ -281,13 +283,13 @@ Smith:"image/smithsched.jpg",
 
 Poliwes:"image/poliwessched.jpg",
 
-Tadiangan:"image/tadiangan-schedule.jpg",
+Tadiangan:" image/tadiangan-schedule.jpg",
 
 "San Carlos":"image/sancarlos-schedule.jpg",
 
 Bakakeng:"image/bakakengsched.jpg",
 
-Victoria :"image/victoriasched.jpg"
+Victoria:"image/victoriasched.jpg"
 
 
 };
@@ -322,3 +324,4 @@ function closeSchedule(){
 
 }
 
+console.log("Schedule loaded");
