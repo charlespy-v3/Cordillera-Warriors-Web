@@ -51,6 +51,11 @@ table.innerHTML+=`
 
 <td>${row[5]}</td>
 
+<td>${row[6]}</td>
+
+<td>${row[7]}</td>
+
+
 <td>${date.toLocaleTimeString()}</td>
 
 </tr>
