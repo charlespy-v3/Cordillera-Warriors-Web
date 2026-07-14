@@ -17,7 +17,7 @@ left:50%;
 transform:translate(-50%,-50%);
 width:500px;
 height:500px;
-background:url("image/logobg.jpg");
+background:url("../image/logobg.jpg");
 background-size:contain;
 background-repeat:no-repeat;
 opacity:.12;

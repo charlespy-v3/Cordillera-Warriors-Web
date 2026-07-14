@@ -76,8 +76,8 @@ const data={
 name:document.getElementById("name").value,
 age:document.getElementById("age").value,
 belt:document.getElementById("belt").value,
-facebook:document.getElementById("facebook").value,
 address:document.getElementById("address").value,
+facebook:document.getElementById("facebook").value,
 medical:document.getElementById("medical").value
 
 };
@@ -94,7 +94,7 @@ formData.append("facebook", data.facebook);
 formData.append("medical", data.medical);
 
 const response = await fetch(
-"https://script.google.com/macros/s/AKfycbwcZTuUtB_xY0BEWeELlmHYCsXVUkcXdOXipVsLcJjs-WI6aCcXjvIY_kMoEbXBsxTnoQ/exec",
+"https://script.google.com/macros/s/AKfycbwLOhhczBMUdrCMPbtGxcQSXXG33pmAV2SU1TMI0PGmeidFkwOc8xDnavVuBhWjo9LSFg/exec",
 {
 method:"POST",
 body:formData
@@ -138,6 +138,7 @@ error.message
 
 submitBtn.disabled=false;
 submitBtn.textContent="Submit Enrollment";
+submitBtn.classList.remove("loading");
 
 }
 
