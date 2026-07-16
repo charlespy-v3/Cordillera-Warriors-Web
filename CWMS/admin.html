@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cordillera Warriors Management System</title>
+
+<link rel="stylesheet" href="/CWMS/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+
+<!-- Player Popup -->
+<div id="playerModal">
+<div class="modal-content">
+
+<h2>👤 Player Profile</h2>
+
+<div id="playerDetails">
+
+<label>Player ID</label>
+<input id="editID" readonly>
+
+<label>Name</label>
+<input id="editName">
+
+<label>Gender</label>
+<select id="editGender">
+
+<option>Male</option>
+
+<option>Female</option>
+
+</select>
+
+<label>Age</label>
+<input type="number" id="editAge">
+
+<label>Gym</label>
+<select id="editGym">
+
+<option>Joaquin Smith JHS(Main)</option>
+
+<option>Poliwes</option>
+
+<option>Tadiangan</option>
+
+<option>San Carlos</option>
+
+<option>Bakakeng</option>
+
+<option>Victoria</option>
+
+</select>
+
+<label>Belt</label>
+<select id="editBelt">
+
+<option>White</option>
+
+<option>Low Yellow</option>
+
+<option>High Yellow</option>
+
+<option>Low Blue</option>
+
+<option>High Blue</option>
+
+<option>Low Red</option>
+
+<option>High Red</option>
+
+<option>Low Brown</option>
+
+<option>High Brown</option>
+
+<option>Black</option>
+
+</select>
+
+<label>Facebook</label>
+
+<input id="editFacebook">
+
+<label>Medical</label>
+
+<textarea id="editMedical"></textarea>
+
+<label>Status</label>
+
+<select id="editStatus">
+
+<option>Pending</option>
+
+<option>Active</option>
+
+<option>Inactive</option>
+
+<option>Dropped</option>
+
+<option>Archived</option>
+
+</select>
+
+<p>
+
+<strong>Date Enrolled:</strong>
+
+<span id="editDate"></span>
+
+</p>
+
+</div>
+
+<div class="player-buttons">
+
+<button id="savePlayer">
+
+💾 Save Changes
+
+</button>
+
+
+</div>
+
+<button
+class="close-modal"
+onclick="closePlayer()">
+
+✕ Close
+
+</button>
+
+</div>
+</div>
+
+
+
+<header class="dashboard-header">
+
+<div class="header-logo">
+
+<img src="/Main/image/logo.jpg" alt="CW Logo">
+
+</div>
+
+<div class="header-title">
+
+<h1>Cordillera Warriors</h1>
+
+<p>Management System (CWMS)</p>
+
+</div>
+
+<div class="header-right">
+
+<div class="coach-badge">
+
+👤 Coach Dashboard
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="stats">
+
+<div class="stat-card">
+
+<h3>Total Students</h3>
+
+<p id="totalStudents">0</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Active Students</h3>
+
+<p id="activeStudents">0</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Gyms</h3>
+
+<p id="totalGyms">0</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Today's Enrollments</h3>
+
+<p id="todayEnrollments">0</p>
+
+</div>
+
+</section>
+
+<!--Filters-->
+<section class="filters">
+
+<div class="filter-bar">
+
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search player...">
+
+<select id="gymFilter">
+
+<option value="">All Gyms</option>
+
+<option>Joaquin Smith JHS(Main)</option>
+
+<option>Victoria</option>
+
+<option>Bakakeng</option>
+
+<option>Poliwes</option>
+
+<option>San Carlos</option>
+
+<option>Tadiangan</option>
+
+</select>
+
+<select id="beltFilter">
+
+<option value="">All Belts</option>
+
+<option>White</option>
+
+<option>Low Yellow</option>
+
+<option>High Yellow</option>
+
+<option>Low Blue</option>
+
+<option>High Blue</option>
+
+<option>Low Red</option>
+
+<option>High Red</option>
+
+<option>Low Brown</option>
+
+<option>High Brown</option>
+
+<option>Black</option>
+
+</select>
+
+<select id="statusFilter">
+
+<option value="">All Status</option>
+
+<option>Pending</option>
+
+<option>Active</option>
+
+<option>Inactive</option>
+
+<option>Dropped</option>
+
+<option>Archived</option>
+
+</select>
+
+<button id="clearFilters" class="filter-reset-btn">
+
+🔄 Reset
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<section id="dashboard">
+
+<div id="tableBody">
+
+</div>
+
+</section>
+
+<div id="loadingOverlay" class="loading-overlay">
+
+<div class="loader"></div>
+
+<p id="loadingText">Processing...</p>
+
+</div>
+
+<div id="toast"></div>
+
+<footer>
+
+<strong>🥋 Cordillera Warriors Management System (CWMS)</strong>
+
+<br><br>
+
+Version 2.0
+
+<br>
+
+Developed by Charles Dwyne Saguid
+
+<br><br>
+
+© 2026 Cordillera Warriors
+
+</footer>
+
+<script src="./cwms js/config.js"></script>
+<script src="./cwms js/loading.js"></script>
+<script src="./cwms js/api.js"></script>
+<script src="./cwms js/dashboard.js"></script>
+<script src="./cwms js/filters.js"></script>
+<script src="./cwms js/popup.js"></script>
+<script src="./cwms js/status.js"></script>
+<script src="./cwms js/admin.js"></script>
+
+
+</body>
+
+</html>
+
