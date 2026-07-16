@@ -185,7 +185,7 @@ const newsData={
 
 yuri:{
 
-image:"image/yuri.jpg",
+image:"/Main/image/yuri.jpg",
 
 title:"Big Boy or Baby Boy",
 
@@ -196,7 +196,7 @@ text:"A boy with Big dreams and financial obstacle to 1500 can you ease your lif
 
 carlo:{
 
-image:"image/carlo.jpg",
+image:"/Main/image/carlo.jpg",
 
 title:"The New Daniel Padilla Appears on Cordillera Warriors!!",
 
@@ -207,7 +207,7 @@ text:"A student who says he is the new up and coming Daniel Padilla showing it t
 
 ji:{
 
-image:"image/ji1.jpg",
+image:"/Main/image/ji1.jpg",
 
 title:"Paldo and Paldog",
 
@@ -218,7 +218,7 @@ text:"Nag inuman para sa celebration akala papaldo pumaldog pala sa EA na may pa
 
 silos:{
 
-image:"image/silos.jpg",
+image:"/Main/image/silos.jpg",
 
 title:"Selos or Jalosy?",
 
@@ -229,7 +229,7 @@ text:"After community service lumabas ang matinding nararamdaman"
 
 tulog:{
 
-image:"image/tulog.jpg",
+image:"/Main/image/tulog.jpg",
 
 title:"Tulog tulogan para ma pwetan?",
 
@@ -279,17 +279,17 @@ console.log("News loaded");
 const scheduleData={
 
 
-Smith:"image/smithsched.jpg",
+Smith:"/Main/image/smithsched.jpg",
 
-Poliwes:"image/poliwessched.jpg",
+Poliwes:"/Main/image/poliwessched.jpg",
 
-Tadiangan:" image/tadiangan-schedule.jpg",
+Tadiangan:"/Main/image/tadiangan-schedule.jpg",
 
-"San Carlos":"image/sancarlos-schedule.jpg",
+"San Carlos":"/Main/image/sancarlos-schedule.jpg",
 
-Bakakeng:"image/bakakengsched.jpg",
+Bakakeng:"/Main/image/bakakengsched.jpg",
 
-Victoria:"image/victoriasched.jpg"
+Victoria:"/Main/image/victoriasched.jpg"
 
 
 };
