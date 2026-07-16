@@ -106,6 +106,33 @@ transform:none;
 box-shadow:none;
 }
 
+.password-box{
+position:relative;
+width:100%;
+margin:10px 0;
+}
+
+.password-box input{
+margin:0;
+padding-right:50px;
+}
+
+.toggle-password{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+font-size:20px;
+user-select:none;
+color:#94a3b8;
+transition:.2s;
+}
+
+.toggle-password:hover{
+color:#22c55e;
+}
+
 #message{
 margin-top:18px;
 min-height:20px;
@@ -206,3 +233,4 @@ font-size:16px;
 }
 
 }
+
