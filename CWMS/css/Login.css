@@ -24,7 +24,7 @@ body::before{
     inset:0;
     background:
         linear-gradient(rgba(8,12,9,.92),rgba(8,12,9,.92)),
-        url("../../Main/image/logo.jpg") center center no-repeat;
+        url("../Main/image/logo.jpg") center center no-repeat;
     background-size:420px;
     opacity:.18;
     pointer-events:none;
