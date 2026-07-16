@@ -10,13 +10,19 @@
 <div class="login-container">
     <img src="../Main/image/logo.jpg" class="login-logo" alt="Cordillera Warriors Logo">
     <h2>Cordillera Warriors</h2>
-    <h3>Coach Login</h3>
+    
 
     <p class="tagline">Cordillera Warriors Management System</p>
 
     <input type="text" id="username" placeholder="Username">
 
+<div class="password-box">
     <input type="password" id="password" placeholder="Password">
+
+    <span id="togglePassword" class="toggle-password">
+        👁
+    </span>
+</div>
 
     <button id="loginBtn" onclick="login()">Login</button>
     <p id="message"></p>

@@ -33,7 +33,8 @@ body::before{
 .login-container{
 position:relative;
 z-index:1;
-width:min(90%,420px);
+width:100%;
+max-width:420px;
 padding:40px 35px;
 background:rgba(17,24,39,.75);
 backdrop-filter:blur(14px);
@@ -167,38 +168,40 @@ transform:rotate(360deg);
 }
 
 /*Mobile*/
-@media(max-width:768px){
+@media (max-width:768px){
 
 body{
-padding:16px;
+padding:15px;
 }
 
 body::before{
-background-size:240px;
+background-size:220px;
 }
 
 .login-container{
 width:100%;
-padding:30px 25px;
+max-width:none;
+padding:35px 25px;
+border-radius:18px;
 }
 
 .login-logo{
-width:80px;
-height:80px;
+width:85px;
+height:85px;
 }
 
 .login-container h2{
-font-size:1.7rem;
+font-size:1.8rem;
 }
 
 .login-container h3{
-font-size:.95rem;
-margin-bottom:25px;
+font-size:1rem;
+margin-bottom:20px;
 }
 
 input,
 button{
-padding:15px;
+padding:16px;
 font-size:16px;
 }
 
